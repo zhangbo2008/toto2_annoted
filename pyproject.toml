@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toto-ts"
+version = "0.2.0"
+description = "Time-Series-Optimized Transformer for Observability"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "DataDog, Inc."}
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["*"]
+
+[tool.black]
+# https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#command-line-options
+# default is 88
+line-length = 120
+# default is per-file auto-detection
+target-version = ['py310']
+include = '\.py$'
+
+[tool.isort]
+profile = "black"

@@ -1,0 +1,333 @@
+tasks:
+- dataset_path: autogluon/fev_datasets
+  horizon: 168
+  num_windows: 10
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [airtemperature]
+  static_columns: []
+  dataset_config: proenfo_gfc12
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 168
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [airtemperature]
+  dataset_config: proenfo_gfc14
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 168
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [airtemperature]
+  static_columns: []
+  dataset_config: proenfo_gfc17
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 14
+  num_windows: 1
+  initial_cutoff: '2023-12-15'
+  min_context_length: 14
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: sales
+  known_dynamic_columns: [total_orders, sell_price_main, type_0_discount, type_1_discount, type_2_discount, type_3_discount, type_4_discount, type_5_discount,
+    type_6_discount, holiday, shops_closed, winter_school_holidays, school_holidays]
+  past_dynamic_columns: [availability]
+  static_columns: [product_unique_id, name, L1_category_name_en, L2_category_name_en, L3_category_name_en, L4_category_name_en, warehouse]
+  dataset_config: rohlik_sales_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 61
+  num_windows: 5
+  initial_cutoff: '2023-05-01'
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: orders
+  known_dynamic_columns: [holiday, shops_closed, winter_school_holidays, school_holidays]
+  past_dynamic_columns: [shutdown, mini_shutdown, blackout, mov_change, frankfurt_shutdown, precipitation, snow, user_activity_1, user_activity_2]
+  static_columns: []
+  dataset_config: rohlik_orders_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 96
+  num_windows: 20
+  seasonality: 96
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [radiation_diffuse_horizontal, temperature, radiation_direct_horizontal]
+  static_columns: []
+  dataset_config: entsoe_15T
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 96
+  num_windows: 20
+  seasonality: 48
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [radiation_diffuse_horizontal, temperature, radiation_direct_horizontal]
+  static_columns: []
+  dataset_config: entsoe_30T
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 168
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [radiation_diffuse_horizontal, temperature, radiation_direct_horizontal]
+  static_columns: []
+  dataset_config: entsoe_1H
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [Generation forecast, System load forecast]
+  dataset_config: epf_be
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [PV+Wind Forecast, Ampirion Load Forecast]
+  dataset_config: epf_de
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [Generation forecast, System load forecast]
+  dataset_config: epf_fr
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [Grid load forecast, Wind power forecast]
+  dataset_config: epf_np
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [Zonal COMED load foecast, System load forecast]
+  dataset_config: epf_pjm
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 48
+  num_windows: 10
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: Sales
+  known_dynamic_columns: [SchoolHoliday, Promo, DayOfWeek, Open, StateHoliday]
+  past_dynamic_columns: [Customers]
+  static_columns: [Store, StoreType, Assortment, CompetitionDistance, CompetitionOpenSinceMonth, CompetitionOpenSinceYear, Promo2, Promo2SinceWeek, Promo2SinceYear,
+    PromoInterval]
+  dataset_config: rossmann_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 28
+  num_windows: 1
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [sell_price, event_National, event_Religious, event_Cultural, snap_CA, event_Sporting, snap_WI, snap_TX]
+  static_columns: [item_id, dept_id, cat_id, store_id, state_id]
+  dataset_config: m5_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 13
+  num_windows: 1
+  seasonality: 1
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [sell_price, event_National, event_Religious, event_Cultural, snap_CA, event_Sporting, snap_WI, snap_TX]
+  static_columns: [item_id, dept_id, cat_id, store_id, state_id]
+  dataset_config: m5_1W
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 28
+  num_windows: 10
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: sales
+  known_dynamic_columns: [holiday, onpromotion]
+  past_dynamic_columns: [oil_price]
+  static_columns: [store_nbr, family, city, state, type, cluster]
+  dataset_config: favorita_stores_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 13
+  num_windows: 10
+  seasonality: 1
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: sales
+  known_dynamic_columns: [onpromotion]
+  past_dynamic_columns: [oil_price]
+  static_columns: [store_nbr, family, city, state, type, cluster]
+  dataset_config: favorita_stores_1W
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 28
+  num_windows: 10
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: transactions
+  known_dynamic_columns: [holiday]
+  past_dynamic_columns: [oil_price]
+  static_columns: [store_nbr, city, state, type, cluster]
+  dataset_config: favorita_transactions_1D
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 96
+  num_windows: 20
+  seasonality: 96
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [wind_speed, day_length, humidity, rain_1h, snow_1h, temp, pressure]
+  past_dynamic_columns: [global_horizontal_irradiance, clouds_all]
+  dataset_config: solar_with_weather_15T
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 24
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  known_dynamic_columns: [wind_speed, day_length, humidity, rain_1h, snow_1h, temp, pressure]
+  past_dynamic_columns: [global_horizontal_irradiance, clouds_all]
+  dataset_config: solar_with_weather_1H
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 128
+  num_windows: 20
+  seasonality: 24
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: [CO(GT), C6H6(GT), NOx(GT), NO2(GT)]
+  known_dynamic_columns: [T, RH, AH]
+  dataset_config: uci_air_quality_1H
+
+- dataset_path: autogluon/fev_datasets
+  horizon: 28
+  num_windows: 11
+  seasonality: 7
+  eval_metric: SQL
+  extra_metrics:
+  - MASE
+  - {name: WAPE, epsilon: 1.0}
+  - {name: WQL, epsilon: 1.0}
+  quantile_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  target: [CO(GT), C6H6(GT), NOx(GT), NO2(GT)]
+  known_dynamic_columns: [T, RH, AH]
+  dataset_config: uci_air_quality_1D

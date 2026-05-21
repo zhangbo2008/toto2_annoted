@@ -1,0 +1,764 @@
+[
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "aioitertools",
+      "origin": "pypi:aioitertools"
+    },
+    "replacement": {
+      "name": "aioitertools",
+      "origin": "https://github.com/omnilib/aioitertools",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Amethyst Reese"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "anyio",
+      "origin": "pypi:anyio"
+    },
+    "replacement": {
+      "name": "anyio",
+      "origin": "https://github.com/agronholm/anyio",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Alex Grönholm"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "beautifulsoup4",
+      "origin": "https://www.crummy.com/software/BeautifulSoup/bs4/"
+    },
+    "replacement": {
+      "name": "beautifulsoup4",
+      "origin": "https://www.crummy.com/software/BeautifulSoup/bs4/",
+      "license": [
+        "MIT License"
+      ],
+      "copyright": [
+        "Leonard Richardson"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "comm",
+      "origin": "https://github.com/ipython/comm"
+    },
+    "replacement": {
+      "name": "comm",
+      "origin": "https://github.com/ipython/comm",
+      "license": [
+        "BSD 3-Clause License"
+      ],
+      "copyright": [
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "contourpy",
+      "origin": "https://github.com/contourpy/contourpy"
+    },
+    "replacement": {
+      "name": "contourpy",
+      "origin": "https://github.com/contourpy/contourpy",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "ContourPy Developers"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "cycler",
+      "origin": "pypi:cycler"
+    },
+    "replacement": {
+      "name": "cycler",
+      "origin": "https://github.com/matplotlib/cycler",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "matplotlib project"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "decorator",
+      "origin": "pypi:decorator"
+    },
+    "replacement": {
+      "name": "decorator",
+      "origin": "https://github.com/micheles/decorator",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "copyright": [
+        "Michele Simionato"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "dill",
+      "origin": "https://github.com/uqfoundation/dill"
+    },
+    "replacement": {
+      "name": "dill",
+      "origin": "https://github.com/uqfoundation/dill",
+      "license": [
+        "BSD-2-Clause AND BSD-3-Clause"
+      ],
+      "copyright": [
+        "Marius Gedminas",
+        "California Institute of Technology",
+        "PiCloud",
+        "Stefano Rivera",
+        "science+computing",
+        "The Uncertainty Quantification Foundation",
+        "Regents of the University of California"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "isort",
+      "origin": "https://github.com/pycqa/isort"
+    },
+    "replacement": {
+      "name": "isort",
+      "origin": "https://github.com/PyCQA/isort",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Timothy Crosley"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "json5",
+      "origin": "https://github.com/dpranke/pyjson5"
+    },
+    "replacement": {
+      "name": "json5",
+      "origin": "https://github.com/dpranke/pyjson5",
+      "license": [
+        "BSD 3-Clause"
+      ],
+      "copyright": [
+        "The joblib"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyter-client",
+      "origin": "https://github.com/jupyter/jupyter_client"
+    },
+    "replacement": {
+      "name": "jupyter-client",
+      "origin": "https://github.com/jupyter/jupyter_client",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyter-console",
+      "origin": "pypi:jupyter-console"
+    },
+    "replacement": {
+      "name": "jupyter-console",
+      "origin": "pypi:jupyter-console",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team",
+        "Adobe System Incorporated",
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyter-events",
+      "origin": "pypi:jupyter-events"
+    },
+    "replacement": {
+      "name": "jupyter-events",
+      "origin": "https://github.com/jupyter/jupyter_events",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyter-server",
+      "origin": "https://github.com/jupyter-server/jupyter_server"
+    },
+    "replacement": {
+      "name": "jupyter-server",
+      "origin": "https://github.com/jupyter-server/jupyter_server",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyter-server-terminals",
+      "origin": "pypi:jupyter_server_terminals"
+    },
+    "replacement": {
+      "name": "jupyter-server-terminals",
+      "origin": "pypi:jupyter_server_terminals",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyterlab",
+      "origin": "https://github.com/jupyterlab/jupyterlab"
+    },
+    "replacement": {
+      "name": "jupyterlab",
+      "origin": "https://github.com/jupyterlab/jupyterlab",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyterlab-pygments",
+      "origin": "https://github.com/jupyterlab/jupyterlab_pygments.git"
+    },
+    "replacement": {
+      "name": "jupyterlab-pygments",
+      "origin": "https://github.com/jupyterlab/jupyterlab_pygments",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyterlab-server",
+      "origin": "https://github.com/jupyterlab/jupyterlab_server"
+    },
+    "replacement": {
+      "name": "jupyterlab-server",
+      "origin": "https://github.com/jupyterlab/jupyterlab_server",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "jupyterlab-widgets",
+      "origin": "https://github.com/jupyter-widgets/ipywidgets"
+    },
+    "replacement": {
+      "name": "jupyterlab-widgets",
+      "origin": "https://github.com/jupyter-widgets/ipywidgets",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "kiwisolver",
+      "origin": "pypi:kiwisolver"
+    },
+    "replacement": {
+      "name": "kiwisolver",
+      "origin": "https://github.com/nucleic/kiwi",
+      "license": [
+        "Modified BSD License"
+      ],
+      "copyright": [
+        "Nucleic Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "matplotlib",
+      "origin": "pypi:matplotlib"
+    },
+    "replacement": {
+      "name": "matplotlib",
+      "origin": "https://github.com/matplotlib/matplotlib",
+      "license": [
+        "PSF-2.0"
+      ],
+      "copyright": [
+        "Adobe Systems Incorporated",
+        "American Mathematical Society",
+        "Andrew Straw",
+        "Bartosz Telenczuk",
+        "Basil K. Malyshev",
+        "Bitstream Inc.",
+        "Cambridge",
+        "Cynthia Brewer",
+        "Darren Dale",
+        "David Turner",
+        "Doug Hellmann",
+        "Elsevier",
+        "Eric Firing",
+        "Ethan Schoonover",
+        "Fredrik Lundh",
+        "Google Inc.",
+        "Hansruedi Baer",
+        "Jean-loup Gailly",
+        "Jeremy O'Donoghue and others",
+        "John Gill",
+        "John Hunter",
+        "John Horigan",
+        "Kevin B. Kenny",
+        "Lucent Technologies",
+        "Mark Harrower",
+        "Matplotlib Development Team",
+        "Maxim Shemanarev",
+        "Michael Droettboom",
+        "MicroPress",
+        "Pierre Raybaut",
+        "Robert Wilhelm",
+        "Scriptics Corporation",
+        "Sun Microsystems",
+        "Tavmjung Bah",
+        "The Meson development team",
+        "The Pennsylvania State University",
+        "The Regents of the University of California",
+        "Tony Juricic",
+        "TyPoland Lukasz Dziedzic",
+        "Werner Lemberg",
+        "Xa9",
+        "the STI Pub Companies"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "nbclient",
+      "origin": "https://github.com/jupyter/nbclient"
+    },
+    "replacement": {
+      "name": "nbclient",
+      "origin": "https://github.com/jupyter/nbclient",
+      "license": [
+        "BSD-3-Clause License"
+      ],
+      "copyright": [
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "nbconvert",
+      "origin": "pypi:nbconvert"
+    },
+    "replacement": {
+      "name": "nbconvert",
+      "origin": "pypi:nbconvert",
+      "license": [
+        "BSD 3-Clause License"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "nbformat",
+      "origin": "https://github.com/jupyter/nbformat.git"
+    },
+    "replacement": {
+      "name": "nbformat",
+      "origin": "https://github.com/jupyter/nbformat",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "notebook",
+      "origin": "https://github.com/jupyter/notebook"
+    },
+    "replacement": {
+      "name": "notebook",
+      "origin": "https://github.com/jupyter/notebook",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "IPython Development Team",
+        "Jupyter Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "notebook-shim",
+      "origin": "pypi:notebook_shim"
+    },
+    "replacement": {
+      "name": "notebook-shim",
+      "origin": "pypi:notebook_shim",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Project Jupyter Contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "numpy",
+      "origin": "https://github.com/numpy/numpy"
+    },
+    "replacement": {
+      "name": "numpy",
+      "origin": "https://github.com/numpy/numpy",
+      "license": [
+        "BSD-2-Clause AND BSD-3-Clause"
+      ],
+      "copyright": [
+        "NumPy Developers."
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "pandas",
+      "origin": "https://github.com/pandas-dev/pandas"
+    },
+    "replacement": {
+      "name": "pandas",
+      "origin": "https://github.com/pandas-dev/pandas",
+      "license": [
+        "BSD-2-Clause AND BSD-3-Clause"
+      ],
+      "copyright": [
+        "AQR Capital Management",
+        "LLC",
+        "Lambda Foundry",
+        "Inc.",
+        "PyData Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "pluggy",
+      "origin": "pypi:pluggy"
+    },
+    "replacement": {
+      "name": "pluggy",
+      "origin": "https://github.com/pytest-dev/pluggy",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Holger Krekel"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "pyzmq",
+      "origin": "https://github.com/zeromq/pyzmq"
+    },
+    "replacement": {
+      "name": "pyzmq",
+      "origin": "https://github.com/zeromq/pyzmq",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Min Ragan-Kelley",
+        "Brian E. Granger"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "scikit-learn",
+      "origin": "https://github.com/scikit-learn/scikit-learn"
+    },
+    "replacement": {
+      "name": "scikit-learn",
+      "origin": "https://github.com/scikit-learn/scikit-learn",
+      "license": [
+        "BSD-2-Clause AND BSD-3-Clause"
+      ],
+      "copyright": [
+        "OpenJS Foundation and other contributors",
+        "INRIA",
+        "Python Software Foundation",
+        "Chih-Chung Chang and Chih-Jen Lin",
+        "Holger Krekel and others",
+        "David Cournapeau",
+        "Fabian Pedregosa",
+        "Olivier Grisel",
+        "The LIBLINEAR Project",
+        "The scikit-learn",
+        "David Warde-Farley",
+        "Renato de Pontes Pereira",
+        "Donald Stufft and individual contributors",
+        "The Bootstrap Authors",
+        "Twitter",
+        "Steven Loria",
+        "Jon Lund Steffensen",
+        "Leland McInnes",
+        "University of Amsterdam",
+        "Aric Hagberg",
+        "pandas",
+        "scikit-learn"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "scipy",
+      "origin": "pypi:scipy"
+    },
+    "replacement": {
+      "name": "scipy",
+      "origin": "pypi:scipy",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "copyright": [
+        "Enthought",
+        "Inc.",
+        "SciPy Developers"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "terminado",
+      "origin": "https://github.com/jupyter/terminado"
+    },
+    "replacement": {
+      "name": "terminado",
+      "origin": "https://github.com/jupyter/terminado",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "copyright": [
+        "Jupyter development team",
+        "Ramalingam Saravanan"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "torch-optimi",
+      "origin": "https://github.com/warner-benjamin/optimi"
+    },
+    "replacement": {
+      "name": "torch-optimi",
+      "origin": "https://github.com/warner-benjamin/optimi",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Benjamin Warner"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "traitlets",
+      "origin": "https://github.com/ipython/traitlets"
+    },
+    "replacement": {
+      "name": "traitlets",
+      "origin": "https://github.com/ipython/traitlets",
+      "license": [
+        "BSD-3-Clause License"
+      ],
+      "copyright": [
+        "IPython Development Team"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "transformers",
+      "origin": "https://github.com/huggingface/transformers"
+    },
+    "replacement": {
+      "name": "transformers",
+      "origin": "https://github.com/huggingface/transformers",
+      "license": [
+        "Apache-2.0"
+      ],
+      "copyright": [
+        "The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "types-pyyaml",
+      "origin": "types-pyyaml"
+    },
+    "replacement": {
+      "name": "types-pyyaml",
+      "origin": "types-pyyaml",
+      "license": [
+        "Apache-2.0"
+      ],
+      "copyright": [
+        "Jukka Lehtosalo and contributors"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "unit-scaling"
+    },
+    "replacement": {
+      "name": "unit-scaling",
+      "origin": "https://github.com/graphcore-research/unit-scaling",
+      "license": [
+        "Apache-2.0"
+      ],
+      "copyright": [
+        "Graphcore Ltd."
+      ]
+    }
+  },
+  {
+    "override_type": "add",
+    "target": {
+      "origin": "https://github.com/DataDog/toto"
+    },
+    "replacement": {
+      "name": "dion",
+      "origin": "https://github.com/microsoft/dion",
+      "license": [
+        "MIT"
+      ],
+      "copyright": [
+        "Microsoft Corporation"
+      ]
+    }
+  },
+  {
+    "override_type": "replace",
+    "target": {
+      "component": "uri-template",
+      "origin": "pypi:uri-template"
+    },
+    "replacement": {
+      "name": "uri-template",
+      "origin": "pypi:uri-template",
+      "license": [
+        "MIT License"
+      ],
+      "copyright": [
+        "Peter Linss"
+      ]
+    }
+  }
+]

@@ -1,0 +1,39 @@
+seed: 42
+pretrained_model: Datadog/Toto-Open-Base-1.0 # pretrained model to finetune (uses a patch size of 64)
+
+model:
+  val_prediction_len: 96
+  lr: 0.00004
+  min_lr: 0.00001
+  warmup_steps: 1000         # number of linear warmup steps (change for different training schedules)
+  stable_steps: 200          # number of stable learning rate steps (change for different training schedules)
+  decay_steps: 200          # number of exponential decay steps (change for different training schedules)
+
+data:
+  context_factor: 8         # context length = patch_size * context_factor change for different training context lengths
+  train_batch_size: 16
+  val_batch_size: 1
+  num_workers: 0
+  num_train_samples: 100    # number of instances to sample from each item in the dataset
+  add_exogenous_features: false # add exogenous features to the input training data, set to True to finetune with exogenous features
+  prediction_horizon: null    # prediction horizon for the model (customizable for each dataset)
+  max_rows: 5000            # maximum number of rows to use for training
+
+trainer:
+  max_steps: 1400  # 1000 warmup + 200 stable + 200 decay (change for different training schedules)
+  log_every_n_steps: 10
+  num_sanity_val_steps: 1   # number of validation steps to run before training starts
+  enable_progress_bar: true
+  refresh_rate: 1
+  val_check_interval: 100
+
+checkpoint:
+  dirpath: "checkpoints/toto_finetuning"   # directory to save checkpoints
+  filename: "{epoch}-{step}-{val_loss:.4f}"
+  monitor: val_loss    
+  mode: min            
+  save_top_k: 1        
+
+logging:
+  save_dir: lightning_logs
+  name: toto_finetuning            # name of the experiment, will be used to save the logs
