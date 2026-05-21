@@ -4,7 +4,7 @@
 1. 配置国内的hf镜像:
  https://www.cnblogs.com/zhangbo2008/p/19991764
 2. 运行2.py
-
+项目挺牛逼, 没使用huggingface库而是pytorch手写的一个类似bert架构的时序预测模型.
 
 
 
