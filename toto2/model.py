@@ -614,7 +614,7 @@ class ResidualMLP(nn.Module):
         self.dropout = uu.Dropout(dropout_p)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x_main, x_skip = U.residual_split(x, self.tau)
+        x_main, x_skip = U.residual_split(x, self.tau) # x 拆分成2个正交部分. 然后分别linear变换之后再加.
         h = U.silu(self.linear1(x_main))
         h = self.dropout(self.linear2(h))
         skip = self.skip_proj(x_skip)
@@ -1265,9 +1265,9 @@ class Toto2Model(nn.Module, PyTorchModelHubMixin):
                 del ctx_buf, not_obs, anchor_k
 
             if scaled_context is None:
-                raw_ctx = (full_target[..., :initial_len] - static_loc[..., :initial_len]) / static_scale[..., :initial_len]
+                raw_ctx = (full_target[..., :initial_len] - static_loc[..., :initial_len]) / static_scale[..., :initial_len]  # 数据进行归一化.
                 scaled_context = torch.where(full_mask[..., :initial_len], raw_ctx, torch.zeros_like(raw_ctx)).asinh()
-                context_x = self._embed_patches(scaled_context, full_mask[..., :initial_len], patch_size)
+                context_x = self._embed_patches(scaled_context, full_mask[..., :initial_len], patch_size)# 上下文的编码, 这里是序列前512
 
             raw_pred = (full_target[..., initial_len:pred_end] - static_loc[..., initial_len:pred_end]) / static_scale[..., initial_len:pred_end]
             scaled_pred_region = torch.where(full_mask[..., initial_len:pred_end], raw_pred, torch.zeros_like(raw_pred)).asinh()
@@ -1306,21 +1306,21 @@ class Toto2Model(nn.Module, PyTorchModelHubMixin):
                 combined_x, time_ids=time_ids, group_ids=combined_gids,
                 kv_cache=kv_cache, kv_read_len=kv_read_len,
                 has_missing_values=has_missing_values,
-            )
+            ) # 走的自编码逻辑. 类似bert
             if kv_cache is not None:
                 cache_len += combined_x.shape[-2] - block
 
-            pred_out = x_out[..., -(block + 1) : -1, :]
+            pred_out = x_out[..., -(block + 1) : -1, :] # 最后一个是占位符, 所以切掉.
             block_q = self.output_head(pred_out, q=None)[..., ::nop, :]
 
             loc = rearrange(static_loc[..., pred_start:pred_end], "... (s p) -> ... s p", p=patch_size)
             scale = rearrange(static_scale[..., pred_start:pred_end], "... (s p) -> ... s p", p=patch_size)
-            block_q_real = block_q.sinh() * scale + loc
+            block_q_real = block_q.sinh() * scale + loc # 反归一化.
             block_q_real = self._clamp_nonfinite(block_q_real)
             if cap_min is not None:
                 block_q_real.clamp_(cap_min, cap_max)
             block_q_real = block_q_real.sort(dim=0).values
-            quantiles[..., patches_predicted : patches_predicted + block, :] = block_q_real
+            quantiles[..., patches_predicted : patches_predicted + block, :] = block_q_real # 排序后结果写入quantiles.
 
             patches_predicted += block
 
